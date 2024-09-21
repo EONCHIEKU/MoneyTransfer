@@ -27,7 +27,7 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getUsersNiCurrentUser(Principal principal){
+    public List<User> getUsersWithoutCurrentUser(Principal principal){
         log.info(principal.getName() + " Accessing a list of other tenmo users");
         return userDao.getUsersWithoutCurrentUser(principal.getName());
     }

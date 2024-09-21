@@ -141,6 +141,7 @@ public class App {
         consoleService.printUsers(users);
         int userId = consoleService.promptForInt("Enter ID of user you are sending to (0 to cancel): ");
         if (userId == 0) {
+            System.out.println("Please enter a valid user ID");
             return;
         }
         int amount = consoleService.promptForInt("Enter amount: ");
